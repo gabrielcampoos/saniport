@@ -64,7 +64,7 @@ export const FormLogin = ({
 		setTimeout(() => {
 			setUserLogged(true);
 			handleClose();
-		}, 3000);
+		}, 5000);
 	};
 
 	return (

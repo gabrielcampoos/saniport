@@ -65,7 +65,7 @@ export const ModalSignUpUser = ({
 			setCpf('');
 			setPhone('');
 			handleClose();
-		}, 3000);
+		}, 5000);
 	};
 
 	return (
