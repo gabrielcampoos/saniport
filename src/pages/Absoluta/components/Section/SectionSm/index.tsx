@@ -89,14 +89,16 @@ export const SectionSm = () => {
 								ml: 1,
 								top: -150,
 							}}
-							onClick={() => setOpenSliderOfficeContainers(true)}
+							onClick={() =>
+								setOpenSliderBathroomContainers(true)
+							}
 						>
 							<Typography
 								sx={{
 									fontSize: '14px',
 								}}
 							>
-								Containers Escritório
+								Containers Banheiros
 							</Typography>
 						</Button>
 
@@ -118,7 +120,7 @@ export const SectionSm = () => {
 									fontSize: '14px',
 								}}
 							>
-								Containers Banheiros
+								Containers Escritório
 							</Typography>
 						</Button>
 
