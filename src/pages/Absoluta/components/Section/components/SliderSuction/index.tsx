@@ -104,6 +104,7 @@ function SliderSuction() {
 									display: 'block',
 									maxWidth: 400,
 									overflow: 'hidden',
+									objectFit: 'contain',
 									width: '100%',
 								}}
 								src={step.imgPath}

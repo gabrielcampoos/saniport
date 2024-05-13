@@ -95,7 +95,7 @@ function SliderPortatil() {
 									maxWidth: 400,
 									overflow: 'hidden',
 									width: '100%',
-									objectFit: 'fill',
+									objectFit: 'contain',
 								}}
 								src={step.imgPath}
 								alt={step.label}
