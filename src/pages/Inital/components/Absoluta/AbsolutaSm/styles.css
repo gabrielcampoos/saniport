@@ -1,0 +1,6 @@
+.absolutaExpand:hover {
+    transform: scale(1.5) translate(10px, -60px);
+    transition: 0.5s;
+ }
+ 
+ 

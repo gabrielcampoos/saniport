@@ -1,0 +1,5 @@
+.saniportExpand:hover {
+   transform: scale(2) translate(-10px, -60px);
+   transition: 0.5s;
+}
+
