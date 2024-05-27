@@ -61,7 +61,7 @@ export const Appbar = () => {
 								item
 								xs={3}
 								sm={3}
-								md={2}
+								md={1}
 								sx={{
 									display: 'flex',
 									justifyContent: 'center',
@@ -82,7 +82,7 @@ export const Appbar = () => {
 								item
 								xs={3}
 								sm={3}
-								md={5}
+								md={4}
 								sx={{
 									display: 'flex',
 									justifyContent: 'flex-start',
@@ -109,7 +109,7 @@ export const Appbar = () => {
 								</Box>
 							</Grid>
 
-							<Grid item xs={9} sm={9} md={5}>
+							<Grid item xs={9} sm={9} md={6}>
 								<Box
 									component="ul"
 									sx={{
@@ -149,6 +149,16 @@ export const Appbar = () => {
 										}}
 									>
 										<li>Solicitar Retirada</li>
+									</Button>
+									<Button
+										href="https://auto-nfe.vercel.app"
+										sx={{
+											color: '#fff',
+											fontWeight: 700,
+											fontSize: '1rem',
+										}}
+									>
+										<li>Nfe</li>
 									</Button>
 									<Button
 										sx={{

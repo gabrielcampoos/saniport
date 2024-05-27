@@ -48,8 +48,8 @@ export const AppbarSm = () => {
 				>
 					<Grid
 						item
-						xs={3}
-						sm={3}
+						xs={2}
+						sm={2}
 						md={6}
 						sx={{
 							display: 'flex',
@@ -84,8 +84,8 @@ export const AppbarSm = () => {
 
 					<Grid
 						item
-						xs={9}
-						sm={9}
+						xs={10}
+						sm={10}
 						md={6}
 						sx={{
 							width: '100%',
@@ -129,6 +129,17 @@ export const AppbarSm = () => {
 								}}
 							>
 								<li>Solicitar Retirada</li>
+							</Button>
+
+							<Button
+								href="https://auto-nfe.vercel.app"
+								sx={{
+									color: '#fff',
+									fontWeight: 700,
+									fontSize: '0.6rem',
+								}}
+							>
+								<li>Nfe</li>
 							</Button>
 
 							<Button
