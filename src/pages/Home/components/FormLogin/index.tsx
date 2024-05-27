@@ -1,3 +1,4 @@
+import { Close } from '@mui/icons-material';
 import {
 	Box,
 	Button,
@@ -11,12 +12,11 @@ import {
 	IconButton,
 	TextField,
 } from '@mui/material';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { useAppDispatch, useAppSelector } from '../../../../store/hooks';
 import { showNotification } from '../../../../store/modules/Notification/notificationSlice';
 import { loginUser } from '../../../../store/modules/User/userSlice';
-import { Close } from '@mui/icons-material';
 
 export interface ModalFormLoginProps {
 	open: boolean;
@@ -59,12 +59,13 @@ export const FormLogin = ({
 			email: email,
 		};
 
-		dispatch(loginUser(login));
-
-		setTimeout(() => {
-			setUserLogged(true);
-			handleClose();
-		}, 5000);
+		dispatch(loginUser(login))
+			.then((response) => {
+				response.payload ? setUserLogged(true) : undefined;
+			})
+			.catch((error) => {
+				console.log(error);
+			});
 	};
 
 	return (

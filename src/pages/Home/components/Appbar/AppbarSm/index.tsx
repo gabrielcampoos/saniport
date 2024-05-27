@@ -6,9 +6,11 @@ import { useState } from 'react';
 import { useAppDispatch, useAppSelector } from '../../../../../store/hooks';
 import { logoutUser } from '../../../../../store/modules/User/userSlice';
 import { ModalSignUpUser } from '../../ModalSignUpUser';
+import { ModalSendEmail } from '../../ModalSendEmail';
 
 export const AppbarSm = () => {
 	const [openModalSignUp, setChangeOpenModalSignUp] = useState(false);
+	const [openModalSendEmail, changeOpenModalSendEmail] = useState(false);
 
 	const loggedUser = localStorage.getItem('userLogged');
 	const stateUser = useAppSelector((user) => user.users);
@@ -80,24 +82,35 @@ export const AppbarSm = () => {
 						</Box>
 					</Grid>
 
-					<Grid item xs={9} sm={9} md={6}>
+					<Grid
+						item
+						xs={9}
+						sm={9}
+						md={6}
+						sx={{
+							width: '100%',
+							display: 'flex',
+							justifyContent: 'flex-start',
+							alignItems: 'center',
+						}}
+					>
 						<Box
-							component="ul"
 							sx={{
+								width: '100%',
 								listStyle: 'none',
 								display: 'flex',
-								justifyContent: 'space-evenly',
+								justifySelf: 'center',
 								alignItems: 'center',
 								color: '#05194a',
 								fontWeight: 700,
-								fontSize: '20px',
 							}}
 						>
 							<Button
 								sx={{
 									color: '#fff',
 									fontWeight: 700,
-									fontSize: '1rem',
+									fontSize: '.7rem',
+									flex: 0.6,
 								}}
 								onClick={() => setChangeOpenModalSignUp(true)}
 							>
@@ -107,12 +120,25 @@ export const AppbarSm = () => {
 									<li>Cadastro</li>
 								)}
 							</Button>
+							<Button
+								sx={{
+									color: '#fff',
+									fontWeight: 700,
+									fontSize: '.7rem',
+									flex: 1,
+								}}
+								onClick={() => {
+									changeOpenModalSendEmail(true);
+								}}
+							>
+								<li>Solicitar Retirada</li>
+							</Button>
 
 							<Button
 								sx={{
 									color: '#fff',
 									fontWeight: 700,
-									fontSize: '1rem',
+									fontSize: '0.7rem',
 								}}
 							>
 								<a
@@ -132,6 +158,10 @@ export const AppbarSm = () => {
 			<ModalSignUpUser
 				openModalSignUp={openModalSignUp}
 				changeOpenModalSignUp={setChangeOpenModalSignUp}
+			/>
+			<ModalSendEmail
+				openModalSendEmail={openModalSendEmail}
+				changeOpenModalSendEmail={changeOpenModalSendEmail}
 			/>
 		</>
 	);

@@ -1,14 +1,17 @@
-import { Box, Grid, useMediaQuery, useTheme } from '@mui/material';
+import { Box, Button, Grid, useMediaQuery, useTheme } from '@mui/material';
 
 import { Absoluta } from './components/Absoluta';
 import { Appbar } from './components/Appbar';
 import { Avatar } from './components/Avatar';
 import { Saniport } from './components/Saniport';
 import { Footer } from './components/Footer';
+import { useNavigate } from 'react-router-dom';
 
 export const Inital = () => {
 	const theme = useTheme();
 	const smDown = useMediaQuery(theme.breakpoints.down('sm'));
+
+	const navigate = useNavigate();
 
 	return (
 		<>
@@ -36,8 +39,32 @@ export const Inital = () => {
 								alignItems: 'center',
 							}}
 						>
-							<Appbar />
-
+							<Box
+								sx={{
+									width: '100%',
+									pt: 1,
+									pb: 1,
+									display: 'flex',
+									justifyContent: 'flex-end',
+									alignItems: 'center',
+								}}
+							>
+								<Button
+									variant="contained"
+									sx={{
+										color: '#fff',
+										background: '#2D3091',
+										display: 'block',
+										fontWeight: 700,
+										fontSize: '.6rem',
+									}}
+									onClick={() => {
+										navigate('/saniport');
+									}}
+								>
+									Solicitar Retirada
+								</Button>
+							</Box>
 							<Box
 								sx={{
 									width: '100%',

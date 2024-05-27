@@ -7,8 +7,9 @@ import MenuItem from '@mui/material/MenuItem';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import * as React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const pages = ['Informações', 'Experiências', 'Contato'];
+const pages = ['Solicitar Retirada'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 export const Appbar = () => {
@@ -18,6 +19,8 @@ export const Appbar = () => {
 	const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
 		null,
 	);
+
+	const navigate = useNavigate();
 
 	const handleCloseNavMenu = () => {
 		setAnchorElNav(null);
@@ -75,19 +78,25 @@ export const Appbar = () => {
 
 					<Box
 						sx={{
-							flex: 1,
 							display: { xs: 'none', md: 'flex', zIndex: 2 },
 						}}
 					>
 						{pages.map((page) => (
 							<Button
 								key={page}
-								onClick={handleCloseNavMenu}
+								onClick={() => {
+									handleCloseNavMenu;
+									navigate('/saniport');
+								}}
+								variant="contained"
 								sx={{
 									my: 2,
-									color: '#000',
+									color: '#fff',
+									background: '#2D3091',
 									display: 'block',
 									fontWeight: 700,
+									fontSize: '1.2rem',
+									letterSpacing: '.2rem',
 								}}
 							>
 								{page}

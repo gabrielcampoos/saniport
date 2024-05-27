@@ -7,9 +7,11 @@ import { useState } from 'react';
 import { ModalSignUpUser } from '../ModalSignUpUser';
 import { useAppDispatch, useAppSelector } from '../../../../store/hooks';
 import { logoutUser } from '../../../../store/modules/User/userSlice';
+import { ModalSendEmail } from '../ModalSendEmail';
 
 export const Appbar = () => {
 	const [openModalSignUp, setChangeOpenModalSignUp] = useState(false);
+	const [openModalSendEmail, changeOpenModalSendEmail] = useState(false);
 
 	const theme = useTheme();
 	const smDown = useMediaQuery(theme.breakpoints.down('sm'));
@@ -142,6 +144,18 @@ export const Appbar = () => {
 											fontWeight: 700,
 											fontSize: '1rem',
 										}}
+										onClick={() => {
+											changeOpenModalSendEmail(true);
+										}}
+									>
+										<li>Solicitar Retirada</li>
+									</Button>
+									<Button
+										sx={{
+											color: '#fff',
+											fontWeight: 700,
+											fontSize: '1rem',
+										}}
 									>
 										<a
 											href={`https://api.whatsapp.com/send/?phone=5518998200820&text=Nome: ${stateUser.user.name}%0DCPF: ${stateUser.user.cpf}%0DTelefone: ${stateUser.user.phone}&type=phone_number&app_absent=0`}
@@ -174,6 +188,10 @@ export const Appbar = () => {
 					<ModalSignUpUser
 						openModalSignUp={openModalSignUp}
 						changeOpenModalSignUp={setChangeOpenModalSignUp}
+					/>
+					<ModalSendEmail
+						openModalSendEmail={openModalSendEmail}
+						changeOpenModalSendEmail={changeOpenModalSendEmail}
 					/>
 				</>
 			)}
