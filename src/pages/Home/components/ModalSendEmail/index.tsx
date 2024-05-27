@@ -30,6 +30,8 @@ export const ModalSendEmail = ({
 	changeOpenModalSendEmail,
 }: ModalSendEmailProps) => {
 	const [name, setName] = useState('');
+	const [company, setCompany] = useState('');
+	const [work_location, setWork_location] = useState('');
 	const [phone, setPhone] = useState('');
 
 	const handleClose = () => {
@@ -41,6 +43,8 @@ export const ModalSendEmail = ({
 
 		const templateParams = {
 			from_name: name,
+			company: company,
+			work_location: work_location,
 			phone: phone,
 		};
 
@@ -108,6 +112,28 @@ export const ModalSendEmail = ({
 								}}
 								required
 								value={name}
+							/>
+							<TextField
+								label="Nome da empresa?"
+								type="text"
+								fullWidth
+								sx={{ marginY: 3 }}
+								onChange={(event) => {
+									setCompany(event.currentTarget.value);
+								}}
+								required
+								value={company}
+							/>
+							<TextField
+								label="Qual o local da obra?"
+								type="text"
+								fullWidth
+								sx={{ marginY: 3 }}
+								onChange={(event) => {
+									setWork_location(event.currentTarget.value);
+								}}
+								required
+								value={work_location}
 							/>
 							<TextField
 								label="Qual seu telefone?"
