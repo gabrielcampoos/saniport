@@ -186,7 +186,7 @@ export const Appbar = () => {
 										onClick={() => {
 											dispatch(logoutUser());
 											localStorage.clear();
-											location.reload();
+											navigate('/');
 										}}
 									>
 										<li>Sair</li>
