@@ -108,7 +108,7 @@ export const AppbarSm = () => {
 								sx={{
 									color: '#fff',
 									fontWeight: 700,
-									fontSize: '.6rem',
+									fontSize: '.5rem',
 								}}
 								onClick={() => setChangeOpenModalSignUp(true)}
 							>
@@ -122,7 +122,7 @@ export const AppbarSm = () => {
 								sx={{
 									color: '#fff',
 									fontWeight: 700,
-									fontSize: '.6rem',
+									fontSize: '.5rem',
 								}}
 								onClick={() => {
 									changeOpenModalSendEmail(true);
@@ -136,7 +136,7 @@ export const AppbarSm = () => {
 								sx={{
 									color: '#fff',
 									fontWeight: 700,
-									fontSize: '0.6rem',
+									fontSize: '0.5rem',
 								}}
 							>
 								<li>Nfe</li>
@@ -146,7 +146,7 @@ export const AppbarSm = () => {
 								sx={{
 									color: '#fff',
 									fontWeight: 700,
-									fontSize: '0.6rem',
+									fontSize: '0.5rem',
 								}}
 							>
 								<a
