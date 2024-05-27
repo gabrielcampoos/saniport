@@ -96,7 +96,6 @@ export const AppbarSm = () => {
 					>
 						<Box
 							sx={{
-								width: '100%',
 								listStyle: 'none',
 								display: 'flex',
 								justifySelf: 'center',
@@ -109,8 +108,7 @@ export const AppbarSm = () => {
 								sx={{
 									color: '#fff',
 									fontWeight: 700,
-									fontSize: '.7rem',
-									flex: 0.6,
+									fontSize: '.6rem',
 								}}
 								onClick={() => setChangeOpenModalSignUp(true)}
 							>
@@ -124,8 +122,7 @@ export const AppbarSm = () => {
 								sx={{
 									color: '#fff',
 									fontWeight: 700,
-									fontSize: '.7rem',
-									flex: 1,
+									fontSize: '.6rem',
 								}}
 								onClick={() => {
 									changeOpenModalSendEmail(true);
@@ -138,7 +135,7 @@ export const AppbarSm = () => {
 								sx={{
 									color: '#fff',
 									fontWeight: 700,
-									fontSize: '0.7rem',
+									fontSize: '0.6rem',
 								}}
 							>
 								<a
